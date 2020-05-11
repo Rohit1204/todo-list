@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+.todoListMain .header button{
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px;
+  margin-right: 0px;
+  background-color: #0066ff;
+  color: #FFF;
+  border: 2px solid #0066ff;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todoListMain .header button:hover{
+  cursor: pointer;
+  background-color: #003399;
+  border: 2px solid #003399;
 }
+.todoListMain .header input{
+padding: 10px;
+font-size: 16px;
+border: 2px solid #fff;
+width: 165px;
+outline: none;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+}
+.todoListMain .theList{
+ list-style: none;
+ padding-left: 0;
+ width: 250px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  ul.theList{
+    padding: 0;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
+  .todoListMain .theList li{
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    background-color: rgba(255,255,255,.5);
+    color:#333;
+    border-radius: 5px;
+    list-style: none;
+    transition:  backgground-color .2s ease-out;
+    
+    }
+    .todoListMain .theList li:hover{
+     background-color: pink;
+     cursor: pointer;
+      
+      }
+      .title{
+        font-family: 'Roboto', sans-serif;
+        font-size: 72px;
+      }
+      
+    
+  
