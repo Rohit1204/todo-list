@@ -69,4 +69,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 
 Screenshots:
-https://user-images.githubusercontent.com/46512435/81582381-9bd18600-93cd-11ea-9a3c-25f27fd7439b.jpeg
+<img src="https://user-images.githubusercontent.com/46512435/81582381-9bd18600-93cd-11ea-9a3c-25f27fd7439b.jpeg" height="400">
