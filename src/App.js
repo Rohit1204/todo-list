@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import TodoItems from './TodoItems/TodoItems';
+import TodoItems from './components/TodoItems/TodoItems';
 import './App.css';
+import  {Footer} from './components/Footer/footer.component';
 
 class App extends Component{
   constructor(props)
@@ -51,8 +52,8 @@ render()
         </form>
       </div>
       <TodoItems entries= {this.state.items}
-                  delete={this.deleteItem}
-                  />
+                  delete={this.deleteItem}/>
+      <Footer/>
     </div>
   );
 }  

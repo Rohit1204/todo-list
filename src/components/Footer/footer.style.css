@@ -1,0 +1,15 @@
+.footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #ffffff;
+}
+.github{
+    color: #000000;
+    float: right;
+    margin: 10px;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
