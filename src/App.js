@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import TodoItems from './components/TodoItems/TodoItems';
 import './App.css';
 import  {Footer} from './components/Footer/footer.component';
-
+import Navbar from './components/Navbar/navbar.component';
+import {BrowserRouter as Router} from 'react-router-dom';
 class App extends Component{
   constructor(props)
   {
@@ -39,9 +40,11 @@ class App extends Component{
   }
 render()
 {
-  return(
+ return(
     <div className="todoListMain">
-      <h1 className="title">To-Do List </h1>
+      <Router>
+      <Navbar
+      />
       <div className="header">
         <form onSubmit ={ this.addItem}>
       <input 
@@ -54,6 +57,7 @@ render()
       <TodoItems entries= {this.state.items}
                   delete={this.deleteItem}/>
       <Footer/>
+      </Router>
     </div>
   );
 }  

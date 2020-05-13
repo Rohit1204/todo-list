@@ -1,15 +1,23 @@
-.footer{
+footer{
     position: absolute;
     left: 0;
     bottom: 0;
-    right: 0;
-    background-color: #ffffff;
+    width: 100%;
+    background-color:lightblue;
+    text-align: center;
 }
 .github{
     color: #000000;
-    float: right;
-    margin: 10px;
-    font-size: 20px;
+    font-size: 25px;
     margin-right: 20px;
+}
+.link a:link{
+    color:blue;
+    text-decoration: none;
+     background-color: lightblue;
+     font-size: 36px;
+     font-weight: bold;
+     justify-content: center;
+     
 }
 

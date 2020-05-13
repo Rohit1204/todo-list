@@ -45,9 +45,9 @@ outline: none;
      cursor: pointer;
       
       }
-      .title{
-        font-family: 'Roboto', sans-serif;
-        font-size: 40px;
+      a{
+        color: inherit;
+        text-decoration: none;
       }
       
     

@@ -1,0 +1,26 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    height: 3.9rem;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+& > *{
+    align-self: center;
+}
+.navbar-left{
+    color:#6c757d;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    float: left;
+    right: 100px;
+}
+.navbar-middle{
+    color:#007bff;
+    cursor: pointer;
+    font-size:40px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
