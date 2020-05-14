@@ -26,7 +26,8 @@ box-shadow: 0 10px 35px rgba(0, 0, 0, .1);
     -webkit-appearance: none !important;
     -webkit-box-shadow: 0 10px 35px rgba(0, 0, 0, .1);
     height:40px;
-
+   text-align: center;
+   text-transform: capitalize;
 }
 .todoListMain .theList{
  list-style: none;
@@ -45,7 +46,8 @@ box-shadow: 0 10px 35px rgba(0, 0, 0, .1);
     color:#333;
     border-radius: 5px;
     list-style: none;
-    transition:  backgground-color .2s ease-out;
+    transition:  background-color .2s ease-out;
+    text-transform: capitalize;
     
     }
     .todoListMain .theList li:hover{
