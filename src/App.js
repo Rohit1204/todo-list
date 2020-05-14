@@ -1,66 +1,75 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useRef } from 'react';
 import TodoItems from './components/TodoItems/TodoItems';
 import './App.css';
 import  {Footer} from './components/Footer/footer.component';
 import Navbar from './components/Navbar/navbar.component';
-import {BrowserRouter as Router} from 'react-router-dom';
-class App extends Component{
-  constructor(props)
-  {
-    super(props);
-    this.state={
-      items:[],
-    };
-    this.addItem=this.addItem.bind(this);
-    this.deleteItem=this.deleteItem.bind(this);
-  }
-  addItem(e){
-    if(this._inputElement.value !==" "){
+import {BrowserRouter as Router,Route} from 'react-router-dom';
+import {useLocalStorage, useEffectOnce} from 'react-use';
+export function App(props){
+  const[items,setItems]=useState([]);
+  var _inputElement =useRef("");
+
+  const addItem=(e)=>{
+    if(_inputElement.value !==" "){
       var newItem ={
-        text: this._inputElement.value,
+        text: _inputElement.value,
         key:Date.now()
       };
-      this.setState((prevState)=>{
-        return{
-          items:prevState.items.concat(newItem)
-        };
-      });
-      this._inputElement.value=" ";
+          setItems(items=> items.concat(newItem)
+      );
+      _inputElement.value=" ";
     }
-  console.log(this.state.items);
+  console.log(setItems);
   e.preventDefault();
   }
-  deleteItem(key){
-    var filteredItems= this.state.items.filter(function(item){
+  const deleteItem=(key)=>{
+    var filteredItems= items.filter(function(item){
       return (item.key !==key);
     });
-    this.setState({
-      items:filteredItems
-    });
+   setItems(filteredItems);
   }
-render()
-{
- return(
+  const [darkMode, setDarkMode]=useLocalStorage('darkMode',false);
+  const [isThemeSet]=useLocalStorage('isThemeSet',false);
+  useEffectOnce(()=>{
+    if(
+      window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme:dark)').matches && !isThemeSet){
+        setDarkMode(true);
+      }else if(
+  window.matchMedia && !window.matchMedia('(prefers-color-scheme:dark)').matches && !isThemeSet)
+  {
+    setDarkMode(false);
+  }
+  });
+  React.useEffect(()=>{
+    if(darkMode){
+      document.querySelector('body').classList.add('dark-mode');
+    }
+    else{
+      document.querySelector('body').classList.remove('dark-mode');
+    }
+  },[darkMode]);
+  return(
     <div className="todoListMain">
       <Router>
       <Navbar
+      darkMode={darkMode}
+      setDarkMode={setDarkMode}
       />
       <div className="header">
-        <form onSubmit ={ this.addItem}>
+        <form onSubmit ={addItem}>
       <input 
-      ref={(a) => this._inputElement =a}
+      ref={(a) =>  _inputElement =a}
       placeholder="enter task">
       </input>
       <button type="submit">add</button>
         </form>
       </div>
-      <TodoItems entries= {this.state.items}
-                  delete={this.deleteItem}/>
+      <TodoItems entries= {items}
+                  delete={deleteItem}/>
       <Footer/>
       </Router>
     </div>
   );
-}  
 }
-
 export default App;
