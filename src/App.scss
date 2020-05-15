@@ -2,6 +2,7 @@
   padding: 10px;
   font-size: 16px;
   margin: 10px;
+  margin-top: 35px;
   margin-right: 0px;
   background-color: #0066ff;
   color: #FFF;
@@ -12,22 +13,30 @@
   background-color: #003399;
   border: 2px solid #003399;
 }
+form{
+  outline: none;
+  border: none;
+}
 .todoListMain .header input{
+  margin-top: 30px;
 padding: 10px;
 font-size: 16px;
-border: 0;
+border: none;
 width: 165px;
 background: #fff;
 outline: none;
-border-radius: 5px;
+
 transition: all .2s ease-in-out;
-box-shadow: 0 10px 35px rgba(0, 0, 0, .1);
--moz-box-shadow: 0 10px 35px rgba(0, 0, 0, .1);
-    -webkit-appearance: none !important;
-    -webkit-box-shadow: 0 10px 35px rgba(0, 0, 0, .1);
+border-bottom: #fff;
     height:40px;
    text-align: center;
    text-transform: capitalize;
+   border-top-style: hidden;
+   border-left-style: hidden ;
+   border-bottom-style: groove;
+}
+.no-outline:focus{
+  outline: none;
 }
 .todoListMain .theList{
  list-style: none;
@@ -42,8 +51,8 @@ box-shadow: 0 10px 35px rgba(0, 0, 0, .1);
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 15px;
-    background-color: rgba(255,255,255,.5);
-    color:#333;
+    background-color: #28a74520;
+    color: #dc3545;
     border-radius: 5px;
     list-style: none;
     transition:  background-color .2s ease-out;
@@ -63,6 +72,27 @@ box-shadow: 0 10px 35px rgba(0, 0, 0, .1);
     background: #161625 !important;
   color: #bdbdbd;
   transition: background-color .2s ease-out !important;
+  .Navbar,expand{
+    background: #1e1e30 !important;
+  }
+  input{      
+   background: #161625 !important ;
+   color:#fff !important;
+   border-bottom-style: groove;
+   outline: none;
+   box-shadow: 0px 10px 35px #161625;
+  }
+  .todoListMain .theList li{
+    background-color: #fff ;
+    color: #28a745;
+  }
+ .todoListMain .theList li:hover{
+   background-color: lightblue;
+ }
+ ::placeholder{
+   color:#fff;
+ }
+ 
   }
  
   

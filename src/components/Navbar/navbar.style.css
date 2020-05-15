@@ -1,9 +1,11 @@
 .navbar{
     display: flex;
     flex-direction: row;
-    height: 3.9rem;
+    height: 70px;
     justify-content: space-between;
     padding-bottom: 1rem;
+    border-bottom: 1px solid #000;
+    width: 100%;
 }
 & > *{
     align-self: center;

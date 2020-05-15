@@ -1,6 +1,6 @@
 import React, { Component, useState, useRef } from 'react';
 import TodoItems from './components/TodoItems/TodoItems';
-import './App.css';
+import './App.scss';
 import  {Footer} from './components/Footer/footer.component';
 import Navbar from './components/Navbar/navbar.component';
 import {BrowserRouter as Router,Route} from 'react-router-dom';
@@ -10,6 +10,7 @@ export function App(props){
   var _inputElement =useRef("");
 
   const addItem=(e)=>{
+    e.preventDefault();
     if(_inputElement.value !==" "){
       var newItem ={
         text: _inputElement.value,
@@ -20,7 +21,6 @@ export function App(props){
       _inputElement.value=" ";
     }
   console.log(setItems);
-  e.preventDefault();
   }
   const deleteItem=(key)=>{
     var filteredItems= items.filter(function(item){
@@ -60,7 +60,8 @@ export function App(props){
         <form onSubmit ={addItem}>
       <input 
       ref={(a) =>  _inputElement =a}
-      placeholder="enter task">
+      placeholder="enter task"
+      className="no-outline">
       </input>
       <button type="submit">add</button>
         </form>
