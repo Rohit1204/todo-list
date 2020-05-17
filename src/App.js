@@ -1,9 +1,9 @@
-import React, { Component, useState, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import TodoItems from './components/TodoItems/TodoItems';
 import './App.scss';
 import  {Footer} from './components/Footer/footer.component';
 import Navbar from './components/Navbar/navbar.component';
-import {BrowserRouter as Router,Route} from 'react-router-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
 import {useLocalStorage, useEffectOnce} from 'react-use';
 export function App(props){
   const[items,setItems]=useState([]);
@@ -66,8 +66,11 @@ export function App(props){
       <button type="submit">add</button>
         </form>
       </div>
+      <div className="list">
       <TodoItems entries= {items}
                   delete={deleteItem}/>
+      </div>
+      
       <Footer/>
       </Router>
     </div>

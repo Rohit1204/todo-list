@@ -1,11 +1,11 @@
 .navbar{
-    display: flex;
     flex-direction: row;
     height: 70px;
     justify-content: space-between;
-    padding-bottom: 1rem;
     border-bottom: 1px solid #000;
     width: 100%;
+    top: 0px;
+    margin:0 auto;
 }
 & > *{
     align-self: center;
@@ -16,7 +16,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: 40px;
     font-weight: 600;
-    justify-content: flex-start;
+    float: left;
 }
 .navbar-middle{
     color:#007bff;
@@ -24,4 +24,6 @@
     font-size:40px;
     font-weight: 900;
     text-transform: uppercase;
+    justify-content: center;
+    text-align: center;
 }

@@ -7,6 +7,7 @@
   background-color: #0066ff;
   color: #FFF;
   border: 2px solid #0066ff;
+  float: inherit;
 }
 .todoListMain .header button:hover{
   cursor: pointer;
@@ -17,6 +18,9 @@ form{
   outline: none;
   border: none;
 }
+.header{
+  text-align: center;
+}
 .todoListMain .header input{
   margin-top: 30px;
 padding: 10px;
@@ -25,6 +29,7 @@ border: none;
 width: 165px;
 background: #fff;
 outline: none;
+justify-content: center;
 
 transition: all .2s ease-in-out;
 border-bottom: #fff;
@@ -40,12 +45,14 @@ border-bottom: #fff;
 }
 .todoListMain .theList{
  list-style: none;
- padding-left: 0;
  width: 250px;
+ justify-content: center;
+ text-align: center;
   }
   ul.theList{
     padding: 0;
   }
+
   .todoListMain .theList li{
     padding: 15px;
     font-size: 18px;
@@ -57,6 +64,7 @@ border-bottom: #fff;
     list-style: none;
     transition:  background-color .2s ease-out;
     text-transform: capitalize;
+    float: inherit;
     
     }
     .todoListMain .theList li:hover{
