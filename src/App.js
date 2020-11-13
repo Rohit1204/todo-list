@@ -34,8 +34,7 @@ export function App(props){
     var todoitem=items.map(function(item){
       console.log(item.key)
       if(item.key==key){
-       const updateditem={
-        ...item,
+       console.log(key)
        };
 
        return updateditem;
