@@ -23,10 +23,27 @@ export function App(props){
   console.log(setItems);
   }
   const deleteItem=(key)=>{
+    console.log(key)
     var filteredItems= items.filter(function(item){
       return (item.key !==key);
     });
    setItems(filteredItems);
+  }
+  const updateItem=(key)=>{
+    console.log(key)
+    var todoitem=items.map(function(item){
+      console.log(item.key)
+      if(item.key==key){
+       const updateditem={
+        ...item,
+       };
+
+       return updateditem;
+      }
+       return item
+    });
+    setItems(todoitem)
+    
   }
   const [darkMode, setDarkMode]=useLocalStorage('darkMode',false);
   const [isThemeSet]=useLocalStorage('isThemeSet',false);
@@ -68,7 +85,8 @@ export function App(props){
       </div>
       <div className="list">
       <TodoItems entries= {items}
-                  delete={deleteItem}/>
+                  delete={deleteItem}
+                  updateTasks={updateItem}/>
       </div>
       
       <Footer/>

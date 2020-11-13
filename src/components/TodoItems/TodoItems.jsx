@@ -10,10 +10,17 @@ class TodoItems extends Component{
   delete(key){
     this.props.delete(key);
      }
+  updateTasks(key){
+    this.props.updateTasks(key)
+  }
+
+
   createTasks(item){
     return (
-          <li key={item.key}>{item.text}
+          <li key={item.key}>
+            {item.text}
           <button type="button" onClick={()=> this.delete(item.key)}>X</button>
+          <button type="button" onClick={()=> this.updateTasks(item.key)}>Edit </button>
     </li>
     
    
